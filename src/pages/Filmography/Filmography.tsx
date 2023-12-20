@@ -3,12 +3,7 @@ import DIRECTOR_LIST from "../../assets/directors.json";
 import styles from "./Filmography.module.scss";
 import { Director } from "../../types/Movie";
 import { useState } from "react";
-
-const getDirectorColor = (director: Director) => {
-  const directorFound = DIRECTOR_LIST.find((dir) => dir.name === director);
-  if (directorFound) return directorFound.color;
-  return "white";
-};
+import { getDirectorColor } from "../../utils/getDirectorColor";
 
 function MoviesByDirectorComponent(props: {
   directors: {
