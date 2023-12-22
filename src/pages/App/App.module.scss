@@ -8,7 +8,7 @@
 .main_wrapper {
   @include alignMiddle;
   display: flex;
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .aside {
@@ -16,5 +16,22 @@
 
   @include media(tablet) {
     display: block;
+  }
+}
+
+.footer {
+  background-color: rgb(212, 212, 212);
+  margin-top: 2rem;
+  border-top: 2px solid rgb(199, 199, 199);
+
+  & > div {
+    @include alignMiddle;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    font-family: monospace;
   }
 }

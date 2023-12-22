@@ -35,7 +35,9 @@ function MoviesByDirectorComponent(props: {
               </h4>
             </div>
 
-            <a href={`https://www.google.com/search?q=${title}`}>
+            <a
+              href={`https://www.google.com/search?q=${title}`}
+              target="_blank">
               <h3>{title}</h3>
             </a>
           </article>

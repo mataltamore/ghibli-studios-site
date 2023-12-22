@@ -18,6 +18,15 @@ function App() {
           <Timeline />
         </aside>
       </div>
+
+      <footer className={styles.footer}>
+        <div>
+          <span>
+            {new Date().getFullYear()} &copy; Matteo Altamore's Project
+          </span>
+          <span>"What the Studio Ghibli Website should look like?"</span>
+        </div>
+      </footer>
     </div>
   );
 }
