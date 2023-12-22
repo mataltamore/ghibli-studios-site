@@ -1,0 +1,67 @@
+@import "../../styles/variables";
+
+$black-100: #464545;
+$black-200: #221815;
+
+.header {
+  background-color: $black-200;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  border-bottom: 2px solid $black-100;
+
+  & > div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+  }
+
+  & img {
+    width: 22px;
+    height: 22px;
+  }
+
+  & h1 {
+    font-family: monospace;
+    font-size: 1.75rem;
+  }
+}
+
+.img {
+  background-image: url("/images/park.jpg");
+  background-position: center;
+  background-size: auto;
+  height: 300px;
+
+  @include media(tablet) {
+    background-size: cover;
+    height: 300px;
+  }
+
+  @include media(desktop) {
+    height: 500px;
+  }
+}
+
+.navigator {
+  background-color: $black-200;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  padding-inline: 1.5rem;
+  border-top: 2px solid $black-100;
+
+  & span {
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+  }
+}
