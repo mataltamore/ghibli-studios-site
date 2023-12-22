@@ -7,17 +7,17 @@ import Header from "../Header/Header";
 function App() {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <Header />
+      <Header />
+
+      <div className={styles.main_wrapper}>
+        <main>
+          <Filmography />
+        </main>
+
+        <aside className={styles.aside}>
+          <Timeline />
+        </aside>
       </div>
-
-      <main className={styles.main}>
-        <Filmography />
-      </main>
-
-      <aside className={styles.aside}>
-        <Timeline />
-      </aside>
     </div>
   );
 }

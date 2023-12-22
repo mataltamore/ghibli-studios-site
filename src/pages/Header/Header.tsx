@@ -5,15 +5,19 @@ function Header() {
     <>
       <header className={styles.header}>
         <div>
-          <img src="/favicon.png" alt="SG" />
+          <div className={styles.iconWrapper}>
+            <img src="/favicon.png" alt="SG" />
+          </div>
+          <h1>~ Studio Ghibli</h1>
         </div>
-        <h1>~ Studio Ghibli</h1>
       </header>
 
       <div className={styles.img} />
 
       <header className={styles.navigator}>
-        <span>Home \ Filmography</span>
+        <div>
+          <span>Home \ Filmography</span>
+        </div>
       </header>
     </>
   );

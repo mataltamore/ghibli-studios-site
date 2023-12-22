@@ -11,3 +11,8 @@
     }
   }
 }
+
+@mixin alignMiddle {
+  max-width: 90rem;
+  margin-inline: auto;
+}

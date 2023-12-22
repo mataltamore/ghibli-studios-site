@@ -12,8 +12,8 @@ function Timeline() {
 
         return (
           <div className={styles.wrapper}>
-            <span style={{ backgroundColor: color }}>{year}</span>
             {title}
+            <span style={{ backgroundColor: color }}>{year}</span>
           </div>
         );
       })}

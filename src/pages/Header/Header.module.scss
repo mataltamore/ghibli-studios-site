@@ -6,29 +6,33 @@ $black-200: #221815;
 .header {
   background-color: $black-200;
   color: white;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
 
   border-bottom: 2px solid $black-100;
 
-  & > div:first-of-type {
+  & > div {
+    @include alignMiddle;
+
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    width: 48px;
-    height: 48px;
-  }
-
-  & img {
-    width: 22px;
-    height: 22px;
   }
 
   & h1 {
     font-family: monospace;
     font-size: 1.75rem;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  & img {
+    width: 22px;
+    height: 22px;
   }
 }
 
@@ -51,11 +55,15 @@ $black-200: #221815;
 .navigator {
   background-color: $black-200;
   color: white;
-  display: flex;
-  align-items: center;
 
-  padding-inline: 1.5rem;
   border-top: 2px solid $black-100;
+
+  & > div {
+    @include alignMiddle;
+    display: flex;
+    align-items: center;
+    padding-inline: 1.5rem;
+  }
 
   & span {
     font-family: monospace;

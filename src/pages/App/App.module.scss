@@ -1,23 +1,17 @@
 @import "../../styles/variables";
 
 .container {
-  display: grid;
-  grid-template-areas:
-    "h h h"
-    "m m a";
+  display: flex;
+  flex-direction: column;
 }
 
-.header {
-  grid-area: h;
-}
-
-.main {
-  grid-area: m;
+.main_wrapper {
+  @include alignMiddle;
+  display: flex;
+  margin-top: 32px;
 }
 
 .aside {
-  grid-area: a;
-
   display: none;
 
   @include media(tablet) {
