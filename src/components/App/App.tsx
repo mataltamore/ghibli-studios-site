@@ -1,5 +1,5 @@
 import "./App.module.scss";
-import Filmography from "../Filmography/Filmography";
+import Filmography from "../../pages/Filmography/Filmography";
 import Timeline from "../Timeline/Timeline";
 import styles from "./App.module.scss";
 import Header from "../Header/Header";
