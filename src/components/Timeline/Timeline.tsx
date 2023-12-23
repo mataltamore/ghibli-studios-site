@@ -11,7 +11,7 @@ function Timeline() {
         const color = getDirectorColor(director as Director);
 
         return (
-          <div className={styles.wrapper}>
+          <div className={styles.wrapper} key={title}>
             {title}
             <span style={{ backgroundColor: color }}>{year}</span>
           </div>

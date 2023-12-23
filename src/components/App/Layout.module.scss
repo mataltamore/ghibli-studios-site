@@ -7,8 +7,13 @@
 
 .main_wrapper {
   @include alignMiddle;
+  width: 100%;
+
   display: flex;
+  justify-content: space-between;
+
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .aside {
@@ -21,17 +26,5 @@
 
 .footer {
   background-color: rgb(212, 212, 212);
-  margin-top: 2rem;
   border-top: 2px solid rgb(199, 199, 199);
-
-  & > div {
-    @include alignMiddle;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-
-    font-family: monospace;
-  }
 }

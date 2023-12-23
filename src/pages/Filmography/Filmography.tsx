@@ -4,6 +4,7 @@ import styles from "./Filmography.module.scss";
 import { Director } from "../../types/Movie";
 import { useState } from "react";
 import { getDirectorColor } from "../../utils/getDirectorColor";
+import Layout from "../../components/App/Layout";
 
 function MoviesByDirectorComponent(props: {
   directors: {
@@ -22,7 +23,7 @@ function MoviesByDirectorComponent(props: {
         const color = getDirectorColor(director as Director);
 
         return (
-          <article className={styles.article}>
+          <article className={styles.article} key={title}>
             <img
               src={`/images/movies/${image}`}
               alt={`${title}' theatrical release poster`}
@@ -74,7 +75,7 @@ function DirectorsNavbarComponent(props: {
           );
 
           return (
-            <li>
+            <li key={name}>
               <button
                 type="button"
                 className={styles.button}
@@ -113,18 +114,21 @@ function Filmography() {
   const [directors, setDirectors] = useState(DIRECTOR_LIST);
 
   return (
-    <section className={styles.container}>
-      <div className={styles.title}>
-        <h2>Filmography</h2>
-        <p>
-          The list of all Studio Ghibli movies, you can also filter by director.
-        </p>
-      </div>
+    <Layout>
+      <section className={styles.container}>
+        <div className={styles.title}>
+          <h2>Filmography</h2>
+          <p>
+            The list of all Studio Ghibli movies, you can also filter by
+            director.
+          </p>
+        </div>
 
-      <DirectorsNavbarComponent {...{ directors, setDirectors }} />
+        <DirectorsNavbarComponent {...{ directors, setDirectors }} />
 
-      <MoviesByDirectorComponent directors={directors} />
-    </section>
+        <MoviesByDirectorComponent directors={directors} />
+      </section>
+    </Layout>
   );
 }
 

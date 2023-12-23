@@ -68,4 +68,10 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
+
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
 }
