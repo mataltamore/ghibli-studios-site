@@ -1,8 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
-import Navigator from "../Navigator/Navigator";
+
+function NavigatorLocation({ pathname }: { pathname: string }) {
+  switch (pathname) {
+    case "/":
+      return <Link to="/">Home</Link>;
+    case "/filmography":
+      return (
+        <>
+          <Link to="/">Home</Link>\<Link to="/filmography">Filmography</Link>
+        </>
+      );
+    default:
+      return "";
+  }
+}
+
+function Navigator({ pathname }: { pathname: string }) {
+  return (
+    <header className={styles.navigator}>
+      <div>
+        <span>
+          <NavigatorLocation pathname={pathname} />
+        </span>
+      </div>
+    </header>
+  );
+}
 
 function Header() {
+  const location = useLocation();
+
   return (
     <>
       <header className={styles.header}>
@@ -20,9 +48,17 @@ function Header() {
         </div>
       </header>
 
-      <div className={styles.img} />
+      <div
+        className={styles.img}
+        style={{
+          backgroundImage:
+            location.pathname === "/"
+              ? "url('/images/navbar-2.jpg')"
+              : "url('/images/park.jpg')",
+        }}
+      />
 
-      <Navigator />
+      <Navigator pathname={location.pathname} />
     </>
   );
 }

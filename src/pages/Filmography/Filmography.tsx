@@ -82,6 +82,7 @@ function DirectorsNavbarComponent(props: {
                 style={{
                   backgroundColor: color || "white",
                   opacity: directorFound ? "1" : "0.5",
+                  transition: "opacity 250ms",
                 }}
                 onClick={() => {
                   if (directors.length === DIRECTOR_LIST.length)
