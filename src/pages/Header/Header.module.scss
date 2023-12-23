@@ -9,6 +9,9 @@ $black-200: #221815;
 
   border-bottom: 2px solid $black-100;
 
+  position: sticky;
+  top: 0;
+
   & > div {
     @include alignMiddle;
 
@@ -57,6 +60,9 @@ $black-200: #221815;
   color: white;
 
   border-top: 2px solid $black-100;
+
+  position: sticky;
+  top: 0;
 
   & > div {
     @include alignMiddle;
